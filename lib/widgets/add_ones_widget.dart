@@ -17,6 +17,7 @@ class _AddOnesState extends State<AddOnes> {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      clipBehavior: Clip.none,
       children: [
         Container(
                   padding: const EdgeInsets.all(8),
@@ -29,7 +30,7 @@ class _AddOnesState extends State<AddOnes> {
                   child: Image.asset(widget.image_food, height: 50),
                 ),
                 Positioned(
-                  left: 40,
+                  left: 43,
                   top: 25,
                   child: IconButton(
                     onPressed: (){}, 

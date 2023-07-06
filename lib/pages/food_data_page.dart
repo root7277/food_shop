@@ -136,16 +136,21 @@ tomato,onions and special sauce""", style: TextStyle(fontSize: 17, fontWeight: F
                     ),
                   ),
                   const SizedBox(height: 35),
-                  ElevatedButton(
-                    style: ButtonStyle(
-                      minimumSize: const MaterialStatePropertyAll(Size(357, 50)),
-                      backgroundColor: const MaterialStatePropertyAll(Color(0xFF5F23DE)),
-                      shape: MaterialStatePropertyAll(
-                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))
-                      )
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15),
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                        minimumSize: const MaterialStatePropertyAll(Size(330, 50)),
+                        backgroundColor: const MaterialStatePropertyAll(Color(0xFF5F23DE)),
+                        shape: MaterialStatePropertyAll(
+                          RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))
+                        )
+                      ),
+                      onPressed: (){
+                        Navigator.pushNamed(context, 'items_in_cart');
+                      }, 
+                      child: const Text('Add to cart', style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500, color: Colors.white)),
                     ),
-                    onPressed: (){}, 
-                    child: const Text('Add to cart', style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500, color: Colors.white)),
                   ),
                 ],
               ),

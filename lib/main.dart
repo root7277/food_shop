@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_shop/pages/food_data_page.dart';
 import 'package:food_shop/pages/getstarted_page.dart';
 import 'package:food_shop/pages/home_page.dart';
+import 'package:food_shop/pages/items_in_cart_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +26,9 @@ class MyApp extends StatelessWidget {
         },
         'food_data':(context) {
           return const FoodDataPage();
+        },
+        'items_in_cart':(context) {
+          return const ItemsInCart();
         }
       },
       home: const GetStartedPage(),
