@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_shop/widgets/add_ones_widget.dart';
-import 'package:food_shop/widgets/navigation_bar_widget.dart';
 
 
 class FoodDataPage extends StatefulWidget {
