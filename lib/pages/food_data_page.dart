@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_shop/widgets/add_ones_widget.dart';
+import 'package:food_shop/widgets/navigation_bar_widget.dart';
 
 
 class FoodDataPage extends StatefulWidget {
@@ -17,6 +18,7 @@ class _FoodDataPageState extends State<FoodDataPage> {
     final foodData = ModalRoute.of(context)!.settings.arguments as Map;
 
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       backgroundColor: const Color(0xFF5F23DE),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -147,7 +149,7 @@ tomato,onions and special sauce""", style: TextStyle(fontSize: 17, fontWeight: F
                         )
                       ),
                       onPressed: (){
-                        Navigator.pushNamed(context, 'items_in_cart');
+                        Navigator.pushNamed(context, 'home_page');
                       }, 
                       child: const Text('Add to cart', style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500, color: Colors.white)),
                     ),

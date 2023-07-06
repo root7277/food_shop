@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '';
+import '../appdata/data.dart';
 
 
 class NavigationBarWidget extends StatefulWidget {
@@ -20,14 +22,15 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
       onTap: (value) {
         setState(() {
           _current = value;
+          Navigator.pushNamed(context, map[value]);
         });
       },
 
       items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.home)),
-        BottomNavigationBarItem(icon: Icon(Icons.search)),
-        BottomNavigationBarItem(icon: Icon(Icons.shopping_cart)),
-        BottomNavigationBarItem(icon: Icon(Icons.person)),
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
+        BottomNavigationBarItem(icon: Icon(Icons.search), label: ''),
+        BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: ''),
+        BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
       ]
     );
   }

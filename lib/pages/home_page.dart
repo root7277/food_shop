@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_shop/widgets/navigation_bar_widget.dart';
 // import 'package:food_shop/widgets/navigation_bar_widget.dart';
 import 'package:food_shop/widgets/scroll_food.dart';
 import 'package:food_shop/widgets/cart_widget.dart';
@@ -19,7 +20,7 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        
+        bottomNavigationBar: const NavigationBarWidget(),
         body: Padding(
           padding: const EdgeInsets.only(top: 20),
           child: Column(
