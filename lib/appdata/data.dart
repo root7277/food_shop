@@ -27,4 +27,12 @@ Map map = {
   3: ''
 };
 
+List orderImage = [];
+List orderName = [];
+List orderPrice = [];
+
+Map item = {
+  'item_count': 0,
+  'sum': 0,
+};
 

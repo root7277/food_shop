@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_shop/appdata/data.dart';
 import 'package:food_shop/widgets/add_ones_widget.dart';
 
 
@@ -10,7 +11,7 @@ class FoodDataPage extends StatefulWidget {
 }
 
 class _FoodDataPageState extends State<FoodDataPage> {
-  int count_food = 1;
+  int countFood = 1;
   @override
   Widget build(BuildContext context) {
 
@@ -22,7 +23,7 @@ class _FoodDataPageState extends State<FoodDataPage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
+          SizedBox(
             height: 350,
             child: Padding(
               padding: const EdgeInsets.only(left: 10, top: 34),
@@ -90,19 +91,19 @@ class _FoodDataPageState extends State<FoodDataPage> {
                               IconButton(
                                 onPressed: (){
                                   setState(() { 
-                                  count_food++;
+                                  countFood++;
                                   });
                                 },
                                 icon: const Icon(Icons.add_circle_outline, color: Color(0xFF8058CB), size: 18)
                               ),
-                              Text('$count_food', style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: Color(0xFF5817E1)),),
+                              Text('$countFood', style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: Color(0xFF5817E1)),),
                               IconButton(
                                 onPressed: (){
                                   setState(() {                                 
-                                  if(count_food > 1){
-                                    count_food--;
+                                  if(countFood > 1){
+                                    countFood--;
                                   }else{
-                                    count_food;
+                                    countFood;
                                   }
                                   });
                                 },
@@ -130,9 +131,9 @@ tomato,onions and special sauce""", style: TextStyle(fontSize: 17, fontWeight: F
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        AddOnes(image_food: 'assets/addones/pishloq.png'),
-                        AddOnes(image_food: 'assets/addones/cola.png'),
-                        AddOnes(image_food: 'assets/addones/my.png'),
+                        AddOnes(imageFood: 'assets/addones/pishloq.png'),
+                        AddOnes(imageFood: 'assets/addones/cola.png'),
+                        AddOnes(imageFood: 'assets/addones/my.png'),
                       ],
                     ),
                   ),
@@ -148,7 +149,16 @@ tomato,onions and special sauce""", style: TextStyle(fontSize: 17, fontWeight: F
                         )
                       ),
                       onPressed: (){
-                        Navigator.pushNamed(context, 'home_page');
+                        setState(() {
+                        orderImage.add(foodData['popular_image']);
+                        orderName.add(foodData['popular_name']);
+                        orderPrice.add(foodData['popular_price']);
+                        // item['sum'] += foodData['popular_price'];
+                        item['item_count']++;
+                        });
+
+                        Navigator.pushNamed(context, 'home_page',
+                        );
                       }, 
                       child: const Text('Add to cart', style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500, color: Colors.white)),
                     ),

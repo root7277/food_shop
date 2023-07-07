@@ -12,7 +12,7 @@ class _GetStartedPageState extends State<GetStartedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(85, 25, 213, 1),
+      backgroundColor: const Color.fromRGBO(85, 25, 213, 1),
       body: Padding(
         padding: const EdgeInsets.only(left: 55, top: 120),
         child: Column(

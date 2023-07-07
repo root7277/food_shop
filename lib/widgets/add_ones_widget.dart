@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AddOnes extends StatefulWidget {
-  final String image_food;
+  final String imageFood;
   const AddOnes({
     super.key,
-    required this.image_food,
+    required this.imageFood,
   });
 
   @override
@@ -27,7 +27,7 @@ class _AddOnesState extends State<AddOnes> {
                     borderRadius: BorderRadius.all(Radius.circular(14)),
                     color: Color.fromARGB(255, 224, 223, 223),
                   ),
-                  child: Image.asset(widget.image_food, height: 50),
+                  child: Image.asset(widget.imageFood, height: 50),
                 ),
                 Positioned(
                   left: 43,
