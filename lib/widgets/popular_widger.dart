@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_shop/appdata/popular_data/popular.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:food_shop/appdata/popular_data/popular.dart';
 
 class PopularWidget extends StatefulWidget {
   const PopularWidget({super.key});
@@ -16,13 +16,13 @@ class _PopularWidgetState extends State<PopularWidget> {
       padding: const EdgeInsets.only(left: 10, right: 10),
       child: GridView.builder(
         scrollDirection: Axis.vertical,
-        itemCount: popular_data.length,
+        itemCount: popularData.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           mainAxisExtent: 165,
         ), 
         itemBuilder: (context, index){
-          final items = popular_data[index];
+          final items = popularData[index];
           return Container(
             margin: const EdgeInsets.all(10),
             padding: const EdgeInsets.only(left: 19, right: 12),

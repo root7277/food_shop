@@ -1,4 +1,4 @@
-List <Map> popular_data = [
+List <Map> popularData = [
   {
     'popular_image': 'assets/popular/burger.png',
     'popular_name': 'Beef Burger',

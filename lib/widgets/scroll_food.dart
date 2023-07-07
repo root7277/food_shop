@@ -14,7 +14,7 @@ class _ScrollFoodState extends State<ScrollFood> {
       scrollDirection: Axis.horizontal,
       itemCount: data.length,
       itemBuilder: (context, index){
-        final item_food = data[index];
+        final itemFood = data[index];
         return Padding(
           padding: const EdgeInsets.only(left: 15, right: 8),
           child: Column(
@@ -28,10 +28,10 @@ class _ScrollFoodState extends State<ScrollFood> {
                   borderRadius: BorderRadius.all(Radius.circular(14)),
                   color: Color.fromARGB(255, 224, 223, 223),
                 ),
-                child: Image.asset(item_food['image'], height: 50),
+                child: Image.asset(itemFood['image'], height: 50),
               ),
               const SizedBox(height: 5),
-              Text(item_food['name_food'], style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),)
+              Text(itemFood['name_food'], style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),)
             ],
           ),
         );

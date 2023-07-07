@@ -9,7 +9,7 @@ class ItemCartIn extends StatefulWidget {
 }
 
 class _ItemCartInState extends State<ItemCartIn> {
-  int count_food_2 = 1;
+  int countfood_2 = 1;
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -51,19 +51,19 @@ class _ItemCartInState extends State<ItemCartIn> {
                           IconButton(
                             onPressed: (){
                               setState(() {
-                                count_food_2++;
+                                countfood_2++;
                               });
                             }, 
                             icon: const Icon(Icons.add_circle_outline, color: Color(0xFF8058CB), size: 18),
                           ),
-                          Text('$count_food_2', style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: Color(0xFF5817E1)),),
+                          Text('$countfood_2', style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: Color(0xFF5817E1)),),
                           IconButton(
                             onPressed: (){
                               setState(() {
-                              if(count_food_2 > 1){
-                                count_food_2--;
+                              if(countfood_2 > 1){
+                                countfood_2--;
                               }else{
-                                count_food_2;
+                                countfood_2;
                               }
                               });
                             }, 
