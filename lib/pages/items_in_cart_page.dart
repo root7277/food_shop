@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:food_shop/appdata/data.dart';
 import 'package:food_shop/widgets/item_in_cart_widget.dart';
 
-
 class ItemsInCart extends StatefulWidget {
   const ItemsInCart({super.key});
 
@@ -20,14 +19,24 @@ class _ItemsInCartState extends State<ItemsInCart> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 20, top: 40),
-              child: Text('${item['item_count']} items in cart', style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w500, color: Colors.black),),
+              child: Text(
+                '${item['item_count']} items in cart',
+                style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w500, color: Colors.black),
+              ),
             ),
             const SizedBox(height: 31),
-            const ItemCartIn(),
+            ItemCartIn(
+              onPressed: () {
+                setState(() {});
+              },
+            ),
             // const SizedBox(height: 30),
             const Padding(
               padding: EdgeInsets.only(left: 20),
-              child: Text('Other Instruction', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),),
+              child: Text(
+                'Other Instruction',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+              ),
             ),
             const SizedBox(height: 15),
             const Padding(
@@ -45,7 +54,10 @@ class _ItemsInCartState extends State<ItemsInCart> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Total', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),),
+                  Text(
+                    'Total',
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+                  ),
                   Text('\$36', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600, color: Color(0xFFB89C3A))),
                 ],
               ),
@@ -54,21 +66,28 @@ class _ItemsInCartState extends State<ItemsInCart> {
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: ElevatedButton(
-                style: const ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(Color(0xFF5F23DE)),
-                  minimumSize: MaterialStatePropertyAll(Size(344, 59)),
-                  shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30))))
-                ),
-                onPressed: (){}, 
-                child: const Text('Checkout', style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500, color: Colors.white),)
-              ),
+                  style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(Color(0xFF5F23DE)), minimumSize: MaterialStatePropertyAll(Size(344, 59)), shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30))))),
+                  onPressed: () {},
+                  child: const Text(
+                    'Checkout',
+                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500, color: Colors.white),
+                  )),
             ),
             Center(
               child: TextButton(
-                onPressed: (){
+                onPressed: () {
                   Navigator.pushNamed(context, 'home_page');
-                }, 
-                child: const Text('Back to menu', textAlign: TextAlign.center, style: TextStyle(decoration: TextDecoration.underline, fontSize: 16, fontWeight: FontWeight.w500, color: Colors.black,),),
+                },
+                child: const Text(
+                  'Back to menu',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    decoration: TextDecoration.underline,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black,
+                  ),
+                ),
               ),
             ),
           ],
