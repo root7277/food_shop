@@ -153,12 +153,10 @@ tomato,onions and special sauce""", style: TextStyle(fontSize: 17, fontWeight: F
                         orderImage.add(foodData['popular_image']);
                         orderName.add(foodData['popular_name']);
                         orderPrice.add(foodData['popular_price']);
-                        // item['sum'] += foodData['popular_price'];
                         item['item_count']++;
                         });
 
-                        Navigator.pushNamed(context, 'home_page',
-                        );
+                        Navigator.pushNamed(context, 'home_page');
                       }, 
                       child: const Text('Add to cart', style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500, color: Colors.white)),
                     ),

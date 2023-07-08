@@ -46,7 +46,7 @@ class _ItemsInCartState extends State<ItemsInCart> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text('Total', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),),
-                  Text('\$35', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600, color: Color(0xFFB89C3A))),
+                  Text('\$36', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600, color: Color(0xFFB89C3A))),
                 ],
               ),
             ),

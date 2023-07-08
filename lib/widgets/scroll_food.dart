@@ -9,6 +9,9 @@ class ScrollFood extends StatefulWidget {
 }
 
 class _ScrollFoodState extends State<ScrollFood> {
+
+  int colorIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -20,15 +23,22 @@ class _ScrollFoodState extends State<ScrollFood> {
           padding: const EdgeInsets.only(left: 15, right: 8),
           child: Column(
             children: [
-              Container(
-                padding: const EdgeInsets.all(8),
-                width: 66,
-                height: 52,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(14)),
-                  color: Color.fromARGB(255, 224, 223, 223),
+              InkWell(
+                onTap: (){
+                  setState(() {
+                    colorIndex = index;
+                  });
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(8),
+                  width: 66,
+                  height: 52,
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(Radius.circular(14)),
+                    color: colorIndex == index? const Color(0xFF652BDB): const Color(0xFFDAD7D7),
+                  ),
+                  child: Image.asset(itemFood['image'], height: 50),
                 ),
-                child: Image.asset(itemFood['image'], height: 50),
               ),
               const SizedBox(height: 5),
               Text(itemFood['name_food'], style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),)

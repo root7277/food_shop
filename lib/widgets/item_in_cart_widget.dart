@@ -84,7 +84,7 @@ class _ItemCartInState extends State<ItemCartIn> {
                                   orderImage.remove(orderImage[index]);
                                 });
                                 item['item_count']--;
-                              }, 
+                              },
                               icon: const Icon(Icons.cancel_outlined, color: Color(0xFFCE3B3B)),
                             ),
           );
