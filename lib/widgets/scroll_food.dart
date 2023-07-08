@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_shop/appdata/data.dart';
+
 class ScrollFood extends StatefulWidget {
   const ScrollFood({super.key});
 
@@ -21,7 +22,6 @@ class _ScrollFoodState extends State<ScrollFood> {
             children: [
               Container(
                 padding: const EdgeInsets.all(8),
-                // margin: EdgeInsets.symmetric(horizontal: 12),
                 width: 66,
                 height: 52,
                 decoration: const BoxDecoration(
