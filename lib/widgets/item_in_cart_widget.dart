@@ -29,7 +29,7 @@ class _ItemCartInState extends State<ItemCartIn> {
                 child: Image.asset(orderImage[index]),
               ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 10),
+                  padding: const EdgeInsets.only(left: 10),                   //a
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
